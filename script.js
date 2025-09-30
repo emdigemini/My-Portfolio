@@ -22,6 +22,13 @@ const navSkills = document.querySelector('.nav-skills');
 const navProjects = document.querySelector('.nav-projects');
 const navContact = document.querySelector('.nav-contact');
 
+const input = {
+  client_name   :   document.getElementById('full-name'),
+  email         :   document.getElementById('email'),
+  subject       :   document.getElementById('subject'),
+  message       :   document.getElementById('message'),
+}
+
 const navLinkFooter = [navHome, navAbout, navSkills, navProjects, navContact];
 
 function introAnimation(){
@@ -294,3 +301,56 @@ document.getElementById('message').addEventListener('input', function(){
   this.style.height = 'auto'; 
   this.style.height = this.scrollHeight + 'px'; 
 })
+
+document.querySelector('.send-btn').addEventListener('click', () => {
+  let form = {
+    client_name   :   document.getElementById('full-name').value,
+    email         :   document.getElementById('email').value,
+    subject       :   document.getElementById('subject').value,
+    message       :   document.getElementById('message').value,
+  }
+
+  if(!form.client_name || !form.email || !form.subject || !form.message){
+    checkInvalidBox(form);
+  } 
+  else {
+    emailjs.send('service_jff7blh', 'template_ts32kjk', form).then(messageSent(form));
+  }
+})
+
+function messageSent(form){
+  document.body.insertAdjacentHTML('beforeend', `
+    <div class="message-sent">
+      <div class="thank-you">
+        <p>
+          Thank you for reaching out. I will respond as soon as possible.
+        </p>
+      </div>
+    </div>
+  `)
+  const messageOverlay = document.querySelector('.message-sent');
+  const textAnim = document.querySelector('.thank-you p');
+  textAnim.addEventListener('animationend', () => {
+    messageOverlay.classList.add('fadeOut');
+    messageOverlay.addEventListener('animationend', () => {
+      setTimeout(() => {
+        messageOverlay.remove();
+      }, 500)
+    }, {once: true})
+  }, {once: true})
+  for(let key in form){
+    input[key].value = '';
+  }
+}
+
+function checkInvalidBox(form){
+  for(let key in form){
+    if(!form[key].trim()){
+      input[key].classList.add('error');
+      input[key].focus();
+      return
+    } else {
+      input[key].classList.remove('error');
+    }
+  }
+}

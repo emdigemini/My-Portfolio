@@ -9,11 +9,13 @@
 }
 
 html, body {
+  position: relative;
   background: #1a1a1a;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   width: 100vw;
   overflow-x: hidden;
+  scrollbar-width: 1px;
 } 
 
 nav {
@@ -117,6 +119,7 @@ nav {
 
 /**HOME PAGE**/
 .home {
+  position: relative;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -435,7 +438,7 @@ nav {
 }
 
 .html, .css, .javascript, .jsx,
-.python, .php, .git {
+.python, .php, .git, .bootstrap {
   display: flex;
   flex-direction: column;
   font-size: 24px;
@@ -470,6 +473,11 @@ nav {
 .git .icon i, .git .icon span {
   color: #F05032;
 }
+
+.bootstrap .icon i, .bootstrap .icon span {
+  color: #0d6efd;
+}
+
 
 .icon {
   display: flex;
@@ -566,6 +574,10 @@ nav {
   width: 240px;
 }
 
+.level-bootstrap::before {
+  width: 200px;
+}
+
 .level-vscode::before {
   width: 260px;
 }
@@ -582,7 +594,7 @@ nav {
   display: flex;
   top: 0;
   left: 0;
-  font-size: 24px;
+  font-size: 18px;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -1064,15 +1076,26 @@ video {
 .input-box input {
   background: #1f1f1f;   
   outline: none;
-  border: 1px solid #6666669a;
+  border: 1px solid #97979770;
   border-radius: 4px;
   padding: 10px 16px 10px 8px;
   font-size: 14px;
   color: #fff;
 }
 
-.name, .email {
+.input-name, .input-email {
   width: 240px;
+  height: 70px;
+}
+
+.input-name label, .input-email label,
+.subject-box label {
+  font-size: 14px;
+}
+
+.name, .email, .subject, .subject-box {
+  margin-top: 6px;
+  width: 100%;
 }
 
 .message {
@@ -1082,7 +1105,7 @@ video {
   max-height: 600px;
   width: 100%;
   padding: 6px 16px;
-  border: 1px solid #6666669a;
+  border: 1px solid #97979770;
   background: #1f1f1f;   
   color: #fff;
   resize: none;
@@ -1097,7 +1120,13 @@ video {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  font-weight: 550;
   transition: 0.3s ease-in-out;
+}
+
+.send-btn i {
+  color: #000;
+  font-size: 15px;
 }
 
 .send-btn:active {
@@ -1195,4 +1224,57 @@ footer section ul li {
 
 .connect-with p, i {
   color: var(--low-white);
+}
+
+/**ERROR STATE**/
+#full-name.error, #email.error,
+#subject.error, #message.error {
+  border: 1px solid red;
+}
+
+/**SUCCESS STATE**/
+.message-sent {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.274);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.thank-you {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.thank-you p {
+  text-shadow: 2px 2px 10px rgb(91, 2, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  animation: typing 1.5s
+}
+
+.message-sent.fadeOut {
+  opacity: 1;
+  animation: fadeOut 1s ease-in;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

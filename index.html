@@ -132,7 +132,7 @@
           <div class="level level-js"></div>
         </div>
 
-        <div class="react">
+        <!-- <div class="react">
           <div class="icon">
             <img src="imgs/icons8-react-50.png" alt="">
             0%
@@ -146,7 +146,7 @@
             <span>0%</span>
           </div>
           <div class="level level-jsx"></div>
-        </div>
+        </div> -->
 
       </div>
       <div class="back-end">
@@ -210,6 +210,14 @@
             <span>60%</span>
           </div>
           <div class="level level-git"></div>
+        </div>
+
+        <div class="bootstrap">
+          <div class="icon">
+            <i class="bi bi-bootstrap-fill"></i>
+            <span>50%</span>
+          </div>
+          <div class="level level-bootstrap"></div>
         </div>
 
       </div>
@@ -285,7 +293,7 @@
             <div class="my-info">
               <p style="font-weight: 550; color: #fff;">Phone</p>
               <p>+63 912 345 6789</p>
-              <p>Call me baby</p>
+              <p>Available for calls and messages</p>
             </div>
           </div>
           <div class="contact-card">
@@ -293,7 +301,6 @@
             <div class="my-info">
               <p style="font-weight: 550; color: #fff;">Location</p>
               <p>Pililla, Rizal</p>
-              <p>Open for coffee date, rizal only</p>
             </div>
           </div>
           <div class="contact-card">
@@ -337,9 +344,19 @@
           </p>
           <p style="color: #b4b4b4;">Fill out the form below and I'll get back to you as soon as possible.</p>
           <div class="input-box">
-            <input type="text" class="name" id="name" placeholder="Your name">
-            <input type="email" class="email" id="email" placeholder="your.email@example.com">
-            <textarea class="message" id="message" placeholder="Leave your message..."></textarea>
+            <div class="input-name">
+              <label for="full-name">Full Name *</label>
+              <input type="text" class="name" id="full-name" placeholder="Your name" required>
+            </div>
+            <div class="input-email">
+              <label for="email">Email Address *</label>
+              <input type="email" class="email" id="email" placeholder="your.email@example.com" required>
+            </div>
+            <div class="subject-box">
+              <label for="subject">Subject *</label>
+              <input type="text" class="subject" id="subject" placeholder="Enter a topic or title" required>
+            </div>
+            <textarea class="message" id="message" placeholder="Leave your message..." required></textarea>
             <button class="send-btn">
               <i class="bi bi-send"></i>
               Send Message
@@ -391,11 +408,11 @@
         </p>
         <div class="email-me">
           <p>
-            <i class="bi bi-envelope"></i>
+            <i style="color: #fff;" class="bi bi-envelope"></i>
             emdigemini@gmail.com
           </p>
           <p>
-            <i class="bi bi-geo"></i> 
+            <i style="color: #fff;" class="bi bi-geo"></i> 
             Available for internships, entry-level positions, and freelance projects
           </p>
         </div>
@@ -403,6 +420,16 @@
     </div>
     <p style="font-size: 12px; padding-bottom: 20px;"><i>"Every expert was once a beginner. Every pro was once an amateur."</i></p>
   </footer>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "T5wd1r2CfabMwgP3p",
+        });
+    })();
+  </script>
   <script type="module" src="script.js"></script>
 </body>
 </html>
