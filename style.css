@@ -443,27 +443,31 @@ nav {
   gap: 10px;
 }
 
-.html {
+.html .icon i, .html .icon span {
   color: #F06529;
 }
 
-.css {
+.css .icon i, .css .icon span {
   color: #2965F1;
 }
 
-.jsx {
+.javascript .icon i, .javascript .icon span {
+  color: #F7DF1E;
+}
+
+.jsx .icon i, .jsx .icon span {
   color: #61DAFB;
 }
 
-.python {
+.python .icon i, .python .icon span {
   color: #FFD43B;
 }
 
-.php {
+.php .icon i, .php .icon span{
   color: #777BB4;
 }
 
-.git, .icon i {
+.git .icon i, .git .icon span {
   color: #F05032;
 }
 
@@ -507,8 +511,12 @@ nav {
   width: 180px;
 }
 
+.level-react::before {
+  width: 0;
+}
+
 .level-jsx::before {
-  width: 12px;
+  width: 0;
 }
 
 .level-py::before {
@@ -542,8 +550,8 @@ nav {
   border-radius: 8px;
 }
 
-.level-react::before {
-  width: 12px;
+.vscode .icon span {
+  color: #007ACC;
 }
 
 .level-nodejs::before {
@@ -562,6 +570,27 @@ nav {
   width: 260px;
 }
 
+.back-end {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.back-end::before {
+  content: 'Currently focusing on Front-End Development🎯';
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #1a1a1a83;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
 
 /**PROJECTS PAGE**/
 .projects {
