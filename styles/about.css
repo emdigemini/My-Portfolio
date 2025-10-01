@@ -84,3 +84,30 @@
   color: #fff;
   font-size: 24px;
 }
+
+@media screen and (max-width: 1000px) {
+  .about {
+    padding: 20px;
+  }
+  .about-section {
+    flex-direction: column;
+    height: 100%;
+  }
+  .bio-container {
+    margin: 5px;
+    width: 100vw;
+    font-size: 12px;
+  }
+  .picture-box2 img {
+    height: 250px;
+    width: 100vw;
+  }
+  .my-journey {
+    font-size: 14px;
+    width: 300px;
+  }
+  .my-career div {
+    height: 100px;
+    gap: 0;
+  }
+}

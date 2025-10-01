@@ -222,3 +222,22 @@ video {
 .close-video:hover {
   background: rgb(255, 54, 54);
 }
+
+@media screen and (max-width: 1000px) {
+  .my-project {
+    width: 100vw;
+  }
+  .project-container {
+    width: 300px;
+    height: 300px;
+    font-size: 12px;
+  }
+
+  .other-projects-container {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .other-projects-container .my-other-projects {
+    flex: 1 1 150px;
+  }
+}

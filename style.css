@@ -15,7 +15,6 @@ html, body {
   color: #fff;
   width: 100vw;
   overflow-x: hidden;
-  scrollbar-width: 1px;
 } 
 
 nav {
@@ -258,5 +257,19 @@ footer section ul li {
   }
   100% {
     opacity: 0;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  nav {
+    width: 100vw;
+    padding: 20px 20px;
+  }
+  .name h2 {
+    font-size: 15px;
+  }
+  .navbar, .active-bar {
+    display: none;
   }
 }

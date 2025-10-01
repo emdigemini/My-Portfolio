@@ -114,15 +114,15 @@
 }
 
 .level-html::before {
-  width: 260px;
+  width: 65%;
 }
 
 .level-css::before {
-  width: 220px;
+  width: 55%;
 }
 
 .level-js::before {
-  width: 180px;
+  width: 45%;
 }
 
 .level-react::before {
@@ -142,7 +142,7 @@
 }
 
 .level-git::before {
-  width: 240px;
+  width: 60%;
 }
 
 .react, .nodejs,
@@ -177,15 +177,19 @@
 }
 
 .level-github::before {
-  width: 240px;
+  width: 60%;
 }
 
 .level-bootstrap::before {
-  width: 200px;
+  width: 50%;
 }
 
 .level-vscode::before {
-  width: 260px;
+  width: 65%;
+}
+
+.level-figma::before {
+  width: 15%;
 }
 
 .back-end {
@@ -208,4 +212,81 @@
   background: #1a1a1a83;
   backdrop-filter: blur(10px);
   z-index: 2;
+}
+
+@media screen and (max-width: 1000px) {
+  .skills {
+    height: 100%;
+  }
+  .skills-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .front-end, .back-end, .tools-tech {
+    align-items: flex-start;
+    min-width: 300px;
+    width: 300px;
+  }
+  .html, .css, .javascript, .jsx,
+  .python, .php, .git, .bootstrap {
+    width: 200px;
+  }
+
+  .vscode, .github, .figma {
+    width: 100%;
+  }
+  
+  .level-html::before {
+    width: 65%;
+  }
+
+  .level-css::before {
+    width: 55%;
+  }
+
+  .level-js::before {
+    width: 45%;
+  }
+
+  .level-react::before {
+    width: 0;
+  }
+
+  .level-jsx::before {
+    width: 0;
+  }
+
+  .level-py::before {
+    width: 60px;
+  }
+
+  .level-php::before {
+    width: 12px;
+  }
+
+  .level-git::before {
+    width: 60%;
+  }
+
+  .level-bootstrap::before {
+    width: 50%;
+  }
+
+  .level-github {
+    width: 100%;
+  }
+
+  .level-github::before {
+    width: 60%;
+  }
+
+  .level-vscode::before {
+    width: 65%;
+  }
+
+  .level-figma::before {
+    width: 15%;
+  }
+
+  
 }
