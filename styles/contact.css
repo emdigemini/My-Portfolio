@@ -1,0 +1,306 @@
+.contact {
+  height: 100%;
+  background: #080808;
+  overflow: hidden;
+}
+
+.container {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  word-spacing: 2px;
+  line-height: 22px;
+  opacity: 0;
+}
+
+#getInTouch {
+  border: 1px solid #6666665b;
+  width: max-content;
+  padding: 10px 15px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+.get-in-touch p:nth-child(3){
+  width: 550px;
+  text-align: center;
+}
+
+.touch-by-touch {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+  padding: 10px 45px;
+  border-radius: 30px;
+  justify-content: center;
+  border: 1px solid #0beb0b;
+  color: #2ee42e;
+  background: #027e024f;
+  align-items: center;
+}
+
+.touch-by-touch::before{
+  content: '';
+  position: absolute;
+  left: 3.5%;
+  background: #4eff4e;
+  height: 12px;
+  width: 12px;
+  border-radius: 20px;
+}
+
+.touch-by-touch p:nth-child(2){
+  border-radius: 10px;
+  background: #666666b0;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 12px;
+}
+
+.cards { 
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 35px;
+  background: #000;
+  border: 1px solid #6666669a;
+  border-radius: 12px;
+  text-align: center;
+  padding: 30px 35px;
+  width: 400px;
+  line-height: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.card:hover {
+  background: #4444445e;
+}
+
+.card i {
+  font-size: 20px;
+  background: #525252;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.card p {
+  color: var(--low-white);  
+}
+
+.card .qq {
+  color: #fff;
+  font-size: 18px;
+}
+
+.card div {
+  background: #52525236;
+  border: 1px solid #666;
+  padding: 8px 18px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: default;
+}
+
+.contact-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 60px 50px;
+  opacity: 0;
+}
+
+.contact-info {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--low-white);
+}
+
+.contact-info i {
+  color: #fff;
+  font-size: 22px;
+  background: #6666664f;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 20px 12px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  background: #4444445e;
+  transform: translateX(8px);
+}
+
+.contact-card:not(:hover){
+  animation: notHover 0.5s ease-in;
+}
+
+@keyframes notHover {
+  0% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75%{
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.my-info p:nth-child(3) {
+  font-size: 12px;
+}
+
+.career-objectives {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  gap: 10px;
+  border-top: 1px solid #6666669a;
+  padding-top: 15px;
+}
+
+.career-objectives p:nth-child(1){
+  color: white;
+}
+
+.career-objectives section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-opportunity {
+  width: 250px;
+  padding: 20px 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #4141417c;
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.card-opportunity:hover {
+  transform: scale3d(1.05, 1.03, 1);
+}
+
+.card-opportunity i {
+  background: none;
+  padding: 0;
+}
+
+.card-opportunity p:nth-last-child(1){
+  color: var(--low-white);
+}
+
+.send-message {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6666666c;
+  border-radius: 8px;
+  gap: 10px;
+  padding: 20px 50px;
+  height: fit-content;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 500px;
+  margin-top: 15px;
+}
+
+.input-box input {
+  background: #1f1f1f;   
+  outline: none;
+  border: 1px solid #97979770;
+  border-radius: 4px;
+  padding: 10px 16px 10px 8px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.input-name, .input-email {
+  width: 240px;
+  height: 70px;
+}
+
+.input-name label, .input-email label,
+.subject-box label {
+  font-size: 14px;
+}
+
+.name, .email, .subject, .subject-box {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.message {
+  font-size: 16px;
+  border-radius: 4px;
+  min-height: 200px;
+  max-height: 600px;
+  width: 100%;
+  padding: 6px 16px;
+  border: 1px solid #97979770;
+  background: #1f1f1f;   
+  color: #fff;
+  resize: none;
+  scrollbar-width: none;
+  outline: none;
+  line-height: 22px;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 550;
+  transition: 0.3s ease-in-out;
+}
+
+.send-btn i {
+  color: #000;
+  font-size: 15px;
+}
+
+.send-btn:active {
+  background: #aaaaaa;
+  transform: scale(0.99);
+}

@@ -1,0 +1,224 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1f1f1f;    
+  padding: 50px 12rem;
+  border-bottom: 1px solid #6666666c;
+}
+
+.all-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-header h2 {
+  text-align: center;
+  margin: 25px;
+}
+
+.project-header p {
+  text-align: center;
+  max-width: 550px;
+  color: var(--low-white);
+}
+
+.my-project {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-container {
+  position: relative;
+  display: flex;
+  flex: 1 1 300px;
+  flex-direction: column;
+  margin: 0 15px;
+  align-items: center;
+  height: 700px;
+  min-height: 600px;
+  max-width: fit-content;
+  min-width: 400px;
+  margin-top: 35px;
+  border: 1px solid #6666666c;
+  border-radius: 8px;
+}
+
+.project-img {
+  position: relative;
+  border-radius: 8px;
+  height: 400px;
+  min-height: 300px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+  transition: 0.4s ease-in;
+}
+
+.project-img:hover {
+  box-shadow: 0 -15px 20px rgba(0,0,0,0.3);
+}
+
+.project-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: 0.4s ease-in;
+}
+
+.project-img img:hover {
+  transform: scale(1.05);
+}
+
+.description-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 30px;
+  gap: 30px;
+}
+
+.project-name {
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--low-white);
+}
+
+.see-project {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.see-project a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.view-code, .demo {
+  font-size: 17px;
+  border: 1px solid #6666666c;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.view-code:hover, .demo:hover {
+  transform: scale(1.02);
+  box-shadow: -1px 5px 8px rgba(0,0,0,0.3);
+}
+
+.other-projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 4rem;
+}
+
+.my-other-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.other-projects {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  flex: 1 1 300px;
+  border: 1px solid #6666665b;
+  border-radius: 8px;
+}
+
+.other-project-img {
+  position: relative;
+  border-radius: 8px;
+  height: 300px;
+  min-height: 200px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+  transition: 0.4s ease-in;
+}
+
+.other-project-img:hover {
+  box-shadow: 0 -15px 20px rgba(0,0,0,0.3);
+}
+
+.other-project-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  transition: 0.4s ease-in;
+}
+
+.other-project-img img:hover {
+  transform: scale(1.05);
+}
+
+.other-description-box {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 15px;
+  gap: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.video-container {
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 80%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+video {
+  height: 500px;
+  width: 600px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.close-video {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: red;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white; 
+}
+
+.close-video:hover {
+  background: rgb(255, 54, 54);
+}

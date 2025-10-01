@@ -1,0 +1,86 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1f1f1f;
+  border-bottom: 1px solid #6666663b;
+  padding: 50px;
+}
+
+.bio-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px;
+}
+
+.bio-container p:nth-child(1) {
+  background: #1a1a1a;
+  width: max-content;
+  align-self: center;
+  padding: 10px;
+  border: 1px solid #6666666c;
+  border-radius: 20px;
+}
+
+.bio-container p:nth-child(2) {
+  color: #834eff;
+}
+
+.bio-container p:nth-child(3) {
+  color: #a595c9;
+}
+
+.about-section {
+  display: flex;
+  gap: 50px;
+  height: 650px;
+  padding: 50px;
+  align-items: center;
+}
+
+.picture-box2 {
+  align-self: center; 
+}
+
+.picture-box2 img {
+  height: 450px;
+  border-radius: 20px;
+}
+
+.my-journey {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  line-height: 24px;
+  word-spacing: 2px;
+  width: 500px;
+}
+
+.my-journey h3 {
+  color: #834eff;
+}
+
+.my-career {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #b6b6b6;
+}
+
+.projects-completed, .years-experience {
+  display: flex;
+  flex-direction: column;
+  background: #0f0f0f;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 15px;
+  gap: 15px;
+  border: 1px solid #6666666c;
+}
+
+.count {
+  color: #fff;
+  font-size: 24px;
+}

@@ -35,21 +35,28 @@ function introAnimation(){
   setTimeout(() => {
     firstBox.classList.remove('hide');
     firstBox.classList.toggle('active');
+
     firstBox.addEventListener('animationend', () => {
-      firstBox.classList.toggle('active');
-        secondBox.classList.toggle('active');
-        secondBox.addEventListener('animationend', () => {
-          secondBox.classList.remove('hide');
-          secondBox.classList.toggle('active');
-            thirdBox.classList.toggle('active');
-            thirdBox.addEventListener('animationend', () => {
-              thirdBox.classList.remove('hide');
-              thirdBox.classList.toggle('active');
-                lastBox.classList.remove('hide');
-                lastBox.classList.toggle('active');
-        }, {once: true})
-      }, {once: true})
+    firstBox.classList.toggle('active');
+    secondBox.classList.toggle('active');
+
+    secondBox.addEventListener('animationend', () => {
+    secondBox.classList.remove('hide');
+    secondBox.classList.toggle('active');
+    thirdBox.classList.toggle('active');
+
+    thirdBox.addEventListener('animationend', () => {
+    thirdBox.classList.remove('hide');
+    thirdBox.classList.toggle('active');
+
+    lastBox.classList.remove('hide');
+    lastBox.classList.toggle('active');
     }, {once: true})
+      
+    }, {once: true})
+
+    }, {once: true})
+
   }, 800)
 }
 
@@ -60,60 +67,144 @@ function resetAnimation(){
   })
 }
 
+let active = true;
+
 const observer = new IntersectionObserver((viewPage) => {
   viewPage.forEach(page => {
-    if(page.isIntersecting && page.target.className === 'home'){
+    if(page.isIntersecting && page.target.classList.contains('home')){
       introAnimation();
-    } else {
+    } else if(!page.isIntersecting && !page.target.classList.contains('home')){
       resetAnimation();
+    } 
+    console.log(page.target.className);
+    if(!active) return;
+    if(page.isIntersecting){
+      switch(page.target.className){
+        case 'home':
+          navToHome();
+          break;
+        case 'about':
+          navToAbout();
+          break;
+        case 'skills':
+          navToSkills();
+          break;
+        case 'projects':
+          navToProjects();
+          break;
+        case 'contact':
+          navToContact();
+          break;
+        default:
+          break;
+      }
     }
   });
-}, { threshold: 0.6 });
+}, { threshold: 0.5 });
 
 const body = document.body.children;
-[...body].forEach(child => observer.observe(child))
-
+[...body].forEach(child => observer.observe(child));
 
 navLink.forEach(nav => nav.addEventListener('click', () => {
-    switch (nav.textContent) {
-      case 'About':
-        navToAbout();
-        break;
-      case 'Skills':
-        navToSkills();
-        break;
-      case 'Projects':
-        navToProjects();
-        break;
-      case 'Contact':
-        navToContact();
-        break;
-      default:
-        navToHome();
-        break;
-    }
+  switch (nav.textContent) {
+    case 'About':
+      aboutPage();
+      navToAbout();
+      break;
+    case 'Skills':
+      skillsPage()
+      navToSkills();
+      break;
+    case 'Projects':
+      projectsPage()
+      navToProjects();
+      break;
+    case 'Contact':
+      contactPage()
+      navToContact();
+      break;
+    default:
+      homePage();
+      navToHome();
+      break;
+  }
   })
 );
 
 navLinkFooter.forEach(nav => nav.addEventListener('click', () => {
   switch (nav.textContent) {
     case 'About':
+      aboutPage();
       navToAbout();
       break;
     case 'Skills':
+      skillsPage()
       navToSkills();
       break;
     case 'Projects':
+      projectsPage()
       navToProjects();
       break;
     case 'Contact':
+      contactPage()
       navToContact();
       break;
     default:
+      homePage();
       navToHome();
       break;
   }
 }))
+
+function homePage(){
+  document.querySelector('.home').scrollIntoView({
+    behavior: 'smooth'
+  });
+  active = false;
+  document.addEventListener('scrollend', () => {
+    active = true;
+  });
+}
+
+function aboutPage(){
+  document.querySelector('.about').scrollIntoView({
+    behavior: 'smooth'
+  });
+  active = false;
+  document.addEventListener('scrollend', () => {
+    active = true;
+  });
+}
+
+function skillsPage(){
+  document.querySelector('.skills').scrollIntoView({
+    behavior: 'smooth'
+  });
+  active = false;
+  document.addEventListener('scrollend', () => {
+    active = true;
+  });
+}
+
+function projectsPage(){
+  document.querySelector('.projects').scrollIntoView({
+    behavior: 'smooth'
+  });
+  active = false;
+  document.addEventListener('scrollend', () => {
+    active = true;
+  });
+}
+
+function contactPage(){
+  document.querySelector('.contact').scrollIntoView({
+    behavior: 'smooth'
+  });
+  active = false;
+  setTimeout(() => {
+    active = true;
+  }, 1000)
+}
 
 function navToHome(){
   [about, skills, projects, contact].forEach(el => el.classList.remove('active'));
@@ -126,10 +217,6 @@ function navToHome(){
         activeBar.classList.remove(`${el.textContent.toLowerCase()}-is-active`);
       });
   } 
-
-  document.querySelector('.home').scrollIntoView({
-    behavior: 'smooth'
-  });
 }
 
 function navToAbout(){
@@ -142,10 +229,6 @@ function navToAbout(){
         activeBar.classList.remove(`${el.textContent.toLowerCase()}-is-active`);
       });
   } 
-    
-  document.querySelector('.about').scrollIntoView({
-    behavior: 'smooth'
-  });
 }
 
 function navToSkills(){
@@ -158,10 +241,6 @@ function navToSkills(){
         activeBar.classList.remove(`${el.textContent.toLowerCase()}-is-active`);
       });
   } 
-
-  document.querySelector('.skills').scrollIntoView({
-    behavior: 'smooth'
-  });
 }
 
 function navToProjects(){
@@ -174,10 +253,6 @@ function navToProjects(){
         activeBar.classList.remove(`${el.textContent.toLowerCase()}-is-active`);
       });
   } 
-    
-  document.querySelector('.projects').scrollIntoView({
-    behavior: 'smooth'
-  });
 }
 
 function navToContact(){
@@ -190,10 +265,6 @@ function navToContact(){
         activeBar.classList.remove(`${el.textContent.toLowerCase()}-is-active`);
       });
   } 
-    
-  document.querySelector('.contact').scrollIntoView({
-    behavior: 'smooth'
-  });
 }
   
 
@@ -279,14 +350,14 @@ function wacthDemo(){
   playBtn.forEach((play, index) => {
     play.addEventListener('click', () => {
       overlay[index].style.display = 'flex';
-      video.play();
+      video[index].play();
     })
   })
   closeBtn.forEach((close, index) => {
     close.addEventListener('click', () => {
       overlay[index].style.display = 'none';
-      video.pause();
-      video.currentTime = 0;
+      video[index].pause();
+      video[index].currentTime = 0;
     })
   })
 }
@@ -354,3 +425,37 @@ function checkInvalidBox(form){
     }
   }
 }
+
+/**---ANIMATION FOR CONTACTS---**/
+const add = {
+  anim1   :   document.querySelector('.get-in-touch'),
+  anim2   :   document.querySelector('.card1'),
+  anim3   :   document.querySelector('.card2'),
+  anim4   :   document.querySelector('.contact-box'),
+}
+
+function addAnimation(){
+  for(let a in add){
+    console.log('animation added!');
+    add[a].classList.add('anim');
+  }
+}
+
+function resetContactAnim(){
+  for(let a in add){
+    console.log('animation reset!');
+    add[a].classList.remove('anim');
+  }
+}
+
+const observer2 = new IntersectionObserver((viewPage) => {
+  viewPage.forEach(page => {
+    if(page.isIntersecting && page.target.className === 'contact'){
+      addAnimation();
+    } else if(page.isIntersecting && (page.target.className === 'skills' || page.target.className === 'home')){
+      resetContactAnim();
+    }
+  });
+}, { threshold: 0.3 });
+
+[...body].forEach(child => observer2.observe(child));

@@ -1,0 +1,211 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 30px;
+  height: 100vh;
+  border-bottom: 1px solid #6666669a;
+}
+
+.skills-bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  width: 500px;
+}
+
+.skills-bio p:nth-child(1) {
+  border: 1px solid #6666666c;
+  padding: 10px 20px;
+  border-radius: 12px;
+  width: max-content;
+}
+
+.skills-section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.front-end, .back-end, .tools-tech {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 500px;
+  border: 1px solid #6666666c;
+  padding: 20px 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.html, .css, .javascript, .jsx,
+.python, .php, .git, .bootstrap {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  color: #F7DF1E;
+  gap: 10px;
+}
+
+.html .icon i, .html .icon span {
+  color: #F06529;
+}
+
+.css .icon i, .css .icon span {
+  color: #2965F1;
+}
+
+.javascript .icon i, .javascript .icon span {
+  color: #F7DF1E;
+}
+
+.jsx .icon i, .jsx .icon span {
+  color: #61DAFB;
+}
+
+.python .icon i, .python .icon span {
+  color: #FFD43B;
+}
+
+.php .icon i, .php .icon span{
+  color: #777BB4;
+}
+
+.git .icon i, .git .icon span {
+  color: #F05032;
+}
+
+.bootstrap .icon i, .bootstrap .icon span {
+  color: #0d6efd;
+}
+
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+}
+
+.icon span {
+  font-size: 16px;
+}
+
+.level {
+  position: relative;
+  background: #666;
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.level::before {
+  content: '';
+  position: absolute;
+  height: 8px;
+  border-radius: 20px;
+  top: 1px;
+  left: 0;
+  background: #fff;
+}
+
+.level-html::before {
+  width: 260px;
+}
+
+.level-css::before {
+  width: 220px;
+}
+
+.level-js::before {
+  width: 180px;
+}
+
+.level-react::before {
+  width: 0;
+}
+
+.level-jsx::before {
+  width: 0;
+}
+
+.level-py::before {
+  width: 60px;
+}
+
+.level-php::before {
+  width: 12px;
+}
+
+.level-git::before {
+  width: 240px;
+}
+
+.react, .nodejs,
+.c-sharp, .github,
+.vscode {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.react img,
+.nodejs img,
+.c-sharp img,
+.github img,
+.vscode img{
+  height: 28px;
+  width: 28px;
+  background: #20232A;
+  border-radius: 8px;
+}
+
+.vscode .icon span {
+  color: #007ACC;
+}
+
+.level-nodejs::before {
+  width: 0;
+}
+
+.level-c-sharp::before {
+  width: 0;
+}
+
+.level-github::before {
+  width: 240px;
+}
+
+.level-bootstrap::before {
+  width: 200px;
+}
+
+.level-vscode::before {
+  width: 260px;
+}
+
+.back-end {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.back-end::before {
+  content: 'Currently focusing on Front-End Development🎯';
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #1a1a1a83;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}

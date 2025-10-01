@@ -1,0 +1,65 @@
+.get-in-touch.anim {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  } 75% {
+    opacity: 0.2;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+.card1.anim {
+  opacity: 0;
+  animation: slideIn1 0.8s ease-in forwards;
+}
+
+.card2.anim {
+  opacity: 0;
+  animation: slideIn2 0.8s ease-in forwards;
+}
+
+@keyframes slideIn1 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  } 50% {
+    opacity: 0.2;
+  } 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn2 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  } 50% {
+    opacity: 0.2;
+  } 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contact-box.anim {
+  opacity: 0;
+  animation: slideUp 1.8s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  0% { 
+    transform: translateY(100%);
+    opacity: 0;
+  } 75% { 
+    opacity: 0.3;
+  } 100% {
+    transform: translateY(0);
+    opacity: 1;
+  } 
+}

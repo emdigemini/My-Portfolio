@@ -1,0 +1,184 @@
+.home {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #66666662;
+  padding: 20px 0;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  position: relative;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 700px;
+  padding: 120px 80px;
+}
+
+.picture-box {
+  border-bottom: 1px solid #6666665b;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.picture-box img {
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
+  object-position: 0 -60px;
+  border-radius: 200px;
+  border: 3px solid #66666663;
+}
+
+.introduction-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting {
+  background: #6666666c;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.text-box p {
+  line-height: 24px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  text-align: center;
+}
+
+.text-box span {
+  font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.social-links a {
+  border-radius: 100px;
+  background: #666;
+  padding: 10px 10px 7px;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+.social-links a:hover {
+  background: #969696;
+}
+
+.social-links img {
+  height: 30px;
+}
+
+.animation-introduction {
+  font-family: "Arapey", serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.animation-box {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.animation-box div {
+  width: fit-content;
+  display: inline-block;
+  letter-spacing: 6px;
+}
+
+.first-box.hide p, 
+.second-box.hide p, 
+.third-box.hide p,
+.last-box.hide {
+  display: none;
+}
+
+.first-box.active p {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  border-right: 5px solid #666;
+  animation: typing 1.2s,
+  cursor 0.4s step-end infinite alternate;
+}
+
+.second-box.active p {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  border-right: 5px solid #666;
+  animation: typing 1.2s,
+  cursor 0.4s step-end infinite alternate;
+}
+
+.third-box.active p {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  border-right: 5px solid #666;
+  animation: typing 1s,
+  cursor 0.4s step-end infinite alternate;
+}
+
+.last-box.active p {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  border-right: 5px solid #666;
+  animation: typing 0.8s,
+  cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {width: 0;}
+}
+
+@keyframes cursor {
+  50% {
+    border-right: 5px solid transparent;
+  }
+}
+
+.arrow-down {
+  font-size: 20px;
+  animation: forArrowDown 0.8s infinite;
+}
+
+@keyframes forArrowDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
