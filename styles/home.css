@@ -143,6 +143,9 @@
   .home {
     height: 100%;
   }
+  .square1, .square2 {
+    display: none;
+  }
   .content-box {
     flex-direction: column;
     align-items: center;
@@ -157,5 +160,6 @@
   }
   .animation-introduction {
     opacity: 0;
+    display: none;
   }
 }

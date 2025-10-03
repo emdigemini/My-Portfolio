@@ -8,6 +8,7 @@
 }
 
 .bio-container {
+  opacity: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -50,6 +51,7 @@
 }
 
 .my-journey {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -106,8 +108,13 @@
     font-size: 14px;
     width: 300px;
   }
-  .my-career div {
+
+  .projects-completed, .years-experience {
     height: 100px;
-    gap: 0;
+    width: 100px;
+    font-size: 10px;
+    padding: 10px;
+    gap: 10px;
   }
+
 }

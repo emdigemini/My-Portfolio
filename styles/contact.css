@@ -304,3 +304,91 @@
   background: #aaaaaa;
   transform: scale(0.99);
 }
+
+@media screen and (max-width: 1000px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  .touch-by-touch {
+    flex-direction: column;
+    gap: 10px;
+    min-width: 300px;  
+    font-size: 14px;
+  }
+
+  .touch-by-touch::before {
+    display: none;
+  }
+
+  .cards {
+    gap: 15px;
+  }
+
+  .card1, .card2 {
+    height: 300px;
+    padding: 20px;
+  }
+
+  .card1 i, .card2 i {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .card1 p, .card2 p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .card1 .qq, .card2 .qq {
+    font-size: 16px;
+  }
+
+  .card1 div, .card2 div {
+    display: none;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-card {
+    min-width: 300px;
+    flex-wrap: wrap;
+  }
+
+  .career-objectives {
+    align-items: center;
+    min-width: 200px;
+  }
+
+  .career-objectives section {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .career-objectives section div {
+    width: 50%;
+  }
+
+  .send-message {
+    min-width: 300px;
+    padding: 20px;
+  }
+
+  .input-box {
+    width: 100%;
+    padding: 0;
+  }
+
+  .input-name, .input-email {
+    width: 100%;
+  }
+
+}

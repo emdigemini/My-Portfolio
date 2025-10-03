@@ -1,4 +1,22 @@
 /*HOME ANIMATION*/
+.introduction.anim {
+  animation: slideIn 0.8s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity:  0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .square1.anim {
   transform: translate(70%, 40%) rotateZ(45deg) scale(0.02);
   animation:  squareSpin 1.8s ease forwards,
@@ -118,7 +136,33 @@
   }
 }
 
+/**ABOUT ANIMATION**/
+.bio-container.anim {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.picture-box2.anim {
+  animation: slideInImg 1.3s ease-in-out forwards;
+}
+
+.my-journey.anim {
+  animation: slideIn2 1.3s ease-in-out forwards;
+}
+
+@keyframes slideInImg {
+  0% {
+    transform: translateX(-200%);
+  } 
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /*CONTACT ANIMATION*/
+.get-in-touch {
+  animation: fadeOut 1s ease-in forwards;
+}
+
 .get-in-touch.anim {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
@@ -127,30 +171,56 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-  } 75% {
-    opacity: 0.2;
   } 100% {
     opacity: 1;
   }
 }
 
+.card1 {
+  animation: slideOut1 0.8s ease-in forwards;
+}
+
+.card2 {
+  animation: slideOut2 0.8s ease-in forwards;
+}
+
 .card1.anim {
-  opacity: 0;
   animation: slideIn1 0.8s ease-in forwards;
 }
 
 .card2.anim {
-  opacity: 0;
   animation: slideIn2 0.8s ease-in forwards;
+}
+
+
+@keyframes slideOut1 {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  } 
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOut2 {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  } 
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
 @keyframes slideIn1 {
   0% {
     transform: translateX(-100%);
     opacity: 0;
-  } 50% {
-    opacity: 0.2;
-  } 100% {
+  } 
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
@@ -160,17 +230,15 @@
   0% {
     transform: translateX(100%);
     opacity: 0;
-  } 50% {
-    opacity: 0.2;
-  } 100% {
+  } 
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
 .contact-box.anim {
-  opacity: 0;
-  animation: slideUp 1.8s ease-in-out forwards;
+  animation: slideUp 1.5s ease-in-out forwards;
 }
 
 @keyframes slideUp {
@@ -184,3 +252,4 @@
     opacity: 1;
   } 
 }
+

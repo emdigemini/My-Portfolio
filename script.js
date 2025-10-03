@@ -7,6 +7,12 @@ const lastBox = document.querySelector('.last-box');
 const myProject = document.querySelector('.my-project');
 const myOtherProject = document.querySelector('.my-other-projects');
 
+const home_ = document.getElementById('home_');
+const about_ = document.getElementById('about_');
+const skills_ = document.getElementById('skills_');
+const projects_ = document.getElementById('projects_');
+const contact_ = document.getElementById('contact_');
+
 const home = document.getElementById('home');
 const about = document.getElementById('about');
 const skills = document.getElementById('skills');
@@ -14,6 +20,7 @@ const projects = document.getElementById('projects');
 const contact = document.getElementById('contact');
 const activeBar = document.querySelector('.active-bar');
 
+const navLink_ = [home_, about_, skills_, projects_, contact_];
 const navLink = [home, about, skills, projects, contact, activeBar];
 
 const navHome = document.querySelector('.nav-home');
@@ -21,6 +28,9 @@ const navAbout = document.querySelector('.nav-about');
 const navSkills = document.querySelector('.nav-skills');
 const navProjects = document.querySelector('.nav-projects');
 const navContact = document.querySelector('.nav-contact');
+
+const toggleNav = document.querySelector('.nav-bar');
+const navbar = document.querySelector('.nav-mobile');
 
 const input = {
   client_name   :   document.getElementById('full-name'),
@@ -30,6 +40,21 @@ const input = {
 }
 
 const navLinkFooter = [navHome, navAbout, navSkills, navProjects, navContact];
+
+let mobileNavClose = false;
+toggleNav.addEventListener('click', () => {
+  toggleNav.classList.toggle('toggle');
+  navbar.classList.toggle('toggle');
+  mobileNavClose = !mobileNavClose
+  if(mobileNavClose)
+    return;
+  toggleNav.classList.add('close');
+  navbar.classList.add('close');
+  navbar.addEventListener('animationend', () => {
+    toggleNav.classList.remove('close');
+    navbar.classList.remove('close');
+  }, {once: true})
+})
 
 function introAnimation(){
   setTimeout(() => {
@@ -76,7 +101,6 @@ const observer = new IntersectionObserver((viewPage) => {
     } else if(!page.isIntersecting && !page.target.classList.contains('home')){
       resetAnimation();
     } 
-    console.log(page.target.className);
     if(!active) return;
     if(page.isIntersecting){
       switch(page.target.className){
@@ -104,6 +128,32 @@ const observer = new IntersectionObserver((viewPage) => {
 
 const body = document.body.children;
 [...body].forEach(child => observer.observe(child));
+
+navLink_.forEach(nav => nav.addEventListener('click', () => {
+  switch (nav.textContent) {
+    case 'About':
+      aboutPage();
+      navToAbout();
+      break;
+    case 'Skills':
+      skillsPage()
+      navToSkills();
+      break;
+    case 'Projects':
+      projectsPage()
+      navToProjects();
+      break;
+    case 'Contact':
+      contactPage()
+      navToContact();
+      break;
+    default:
+      homePage();
+      navToHome();
+      break;
+  }
+  })
+);
 
 navLink.forEach(nav => nav.addEventListener('click', () => {
   switch (nav.textContent) {
@@ -207,8 +257,10 @@ function contactPage(){
 }
 
 function navToHome(){
+  [about_, skills_, projects_, contact_].forEach(el => el.classList.remove('active'));
   [about, skills, projects, contact].forEach(el => el.classList.remove('active'));
   
+  home_.classList.add('active');
   home.classList.add('active');
   if(home.classList.contains('active')){
     activeBar.classList.add('home-is-active');
@@ -220,7 +272,10 @@ function navToHome(){
 }
 
 function navToAbout(){
+  [home_, skills_, projects_, contact_].forEach(el => el.classList.remove('active'));
   [home, skills, projects, contact].forEach(el => el.classList.remove('active'));
+  
+  about_.classList.add('active');
   about.classList.add('active');
   if(about.classList.contains('active')){
     activeBar.classList.add('about-is-active');
@@ -232,7 +287,10 @@ function navToAbout(){
 }
 
 function navToSkills(){
+  [home_, about_, projects_, contact_].forEach(el => el.classList.remove('active'));
   [home, about, projects, contact].forEach(el => el.classList.remove('active'));
+
+  skills_.classList.add('active');
   skills.classList.add('active');
   if(skills.classList.contains('active')){
     activeBar.classList.add('skills-is-active');
@@ -244,7 +302,10 @@ function navToSkills(){
 }
 
 function navToProjects(){
+  [home_, skills_, about_, contact_].forEach(el => el.classList.remove('active'));
   [home, skills, about, contact].forEach(el => el.classList.remove('active'));
+
+  projects_.classList.add('active');
   projects.classList.add('active');
   if(projects.classList.contains('active')){
     activeBar.classList.add('projects-is-active');
@@ -256,7 +317,10 @@ function navToProjects(){
 }
 
 function navToContact(){
+  [home_, skills_, about_, projects_].forEach(el => el.classList.remove('active'));
   [home, skills, about, projects].forEach(el => el.classList.remove('active'));
+
+  contact_.classList.add('active');
   contact.classList.add('active');
   if(contact.classList.contains('active')){
     activeBar.classList.add('contact-is-active');
@@ -427,35 +491,63 @@ function checkInvalidBox(form){
 }
 
 /**---ANIMATION FOR CONTACTS---**/
-const add = {
+const contactSection = {
   anim1   :   document.querySelector('.get-in-touch'),
   anim2   :   document.querySelector('.card1'),
   anim3   :   document.querySelector('.card2'),
   anim4   :   document.querySelector('.contact-box'),
 }
 
+const aboutSection = {
+  anim1   :   document.querySelector('.bio-container'),
+  anim2   :   document.querySelector('.picture-box2'),
+  anim3   :   document.querySelector('.my-journey'),
+}
+
 function addAnimation(){
-  for(let a in add){
-    console.log('animation added!');
-    add[a].classList.add('anim');
+  for(let a in contactSection){
+    contactSection[a].classList.add('anim');
   }
 }
 
-function resetContactAnim(){
-  for(let a in add){
-    console.log('animation reset!');
-    add[a].classList.remove('anim');
+function aboutAnimation(){
+  for(let a in aboutSection){
+    aboutSection[a].classList.remove('close');
+    aboutSection[a].classList.add('anim');
+  }
+}
+
+function resetContactAnimation(){
+  for(let a in contactSection){
+    contactSection[a].classList.remove('anim');
   }
 }
 
 const observer2 = new IntersectionObserver((viewPage) => {
   viewPage.forEach(page => {
-    if(page.isIntersecting && page.target.className === 'contact'){
-      addAnimation();
-    } else if(page.isIntersecting && (page.target.className === 'skills' || page.target.className === 'home')){
-      resetContactAnim();
+    if(page.isIntersecting){
+      switch(page.target.className){
+        case 'home':
+          resetContactAnimation();
+          break;
+        case 'about':
+          aboutAnimation();
+          resetContactAnimation();
+          break;
+        case 'skills':
+          resetContactAnimation();
+          break;
+        case 'projects':
+          resetContactAnimation();
+          break;
+        case 'contact':
+          addAnimation();
+          break;
+        default:
+          break;
+      }
     }
   });
-}, { threshold: 0.3 });
+}, { threshold: 0.1 });
 
 [...body].forEach(child => observer2.observe(child));

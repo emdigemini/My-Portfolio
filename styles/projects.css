@@ -233,11 +233,27 @@ video {
     font-size: 12px;
   }
 
+  .project-img {
+    height: 150px;
+  }
+
   .other-projects-container {
     flex-wrap: wrap;
     align-items: center;
   }
+
   .other-projects-container .my-other-projects {
     flex: 1 1 150px;
+  }
+
+.description-box {
+  font-size: 16px;
+}
+
+  .see-project div {
+    padding: 10px;
+  }
+  .see-project a {
+    font-size: 12px;
   }
 }

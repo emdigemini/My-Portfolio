@@ -222,9 +222,19 @@
     flex-direction: column;
     padding: 20px;
   }
+  .skills-bio {
+    width: 75%;
+    line-height: 26px;
+    font-size: 14px;
+  }
+  .skills-bio p:nth-child(1){
+    font-size: 12px;
+    padding: 10px;
+  }
   .front-end, .back-end, .tools-tech {
     align-items: flex-start;
     min-width: 300px;
+    gap: 24px;
     width: 300px;
   }
   .html, .css, .javascript, .jsx,

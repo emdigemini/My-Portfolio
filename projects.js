@@ -19,7 +19,7 @@ export const allProjects = [
     myProject: true,
     name: 'E-Commerce Platform',
     image: 'projects/light_scent.webp',
-    description: 'A front-end e-commerce solution built with pure HTML, CSS, and JavaScript. Features include user authentication, product management, shopping cart, and payment processing. <br><span style="font-weight: 600; color: #cacaca; font-style: italic;">Currently optimized for desktop view</span>.',
+    description: 'A front-end e-commerce solution built with pure HTML, CSS, and JavaScript. Features include user authentication, product management, shopping cart, and payment processing. <br><span style="font-weight: 600; color: #e9e9e9ff; font-style: italic;">Currently optimized for desktop view</span>.',
     code: 'https://github.com/emdigemini/LightScent',
     demo: 'https://emdigemini.github.io/LightScent/'
   },
