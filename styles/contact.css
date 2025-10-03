@@ -245,6 +245,7 @@
 }
 
 .input-box input {
+  font-family:"Inter", sans-serif;
   background: #1f1f1f;   
   outline: none;
   border: 1px solid #97979770;
@@ -252,6 +253,10 @@
   padding: 10px 16px 10px 8px;
   font-size: 14px;
   color: #fff;
+}
+
+.input-box input::placeholder {
+  font-family:"Inter", sans-serif;
 }
 
 .input-name, .input-email {
@@ -275,7 +280,7 @@
   min-height: 200px;
   max-height: 600px;
   width: 100%;
-  padding: 6px 16px;
+  padding: 6px 8px;
   border: 1px solid #97979770;
   background: #1f1f1f;   
   color: #fff;
