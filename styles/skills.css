@@ -122,15 +122,11 @@
 }
 
 .level-js::before {
-  width: 45%;
+  width: 55%;
 }
 
 .level-react::before {
-  width: 0;
-}
-
-.level-jsx::before {
-  width: 0;
+  width: 30%;
 }
 
 .level-py::before {
@@ -255,15 +251,11 @@
   }
 
   .level-js::before {
-    width: 45%;
+    width: 55%;
   }
 
   .level-react::before {
-    width: 0;
-  }
-
-  .level-jsx::before {
-    width: 0;
+    width: 30%;
   }
 
   .level-py::before {
