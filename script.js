@@ -7,11 +7,13 @@ const lastBox = document.querySelector('.last-box');
 const myProject = document.querySelector('.my-project');
 const myOtherProject = document.querySelector('.my-other-projects');
 
+
 const home_ = document.getElementById('home_');
 const about_ = document.getElementById('about_');
 const skills_ = document.getElementById('skills_');
 const projects_ = document.getElementById('projects_');
 const contact_ = document.getElementById('contact_');
+const toContact = document.querySelector('.contactme');
 
 const home = document.getElementById('home');
 const about = document.getElementById('about');
@@ -40,6 +42,12 @@ const input = {
 }
 
 const navLinkFooter = [navHome, navAbout, navSkills, navProjects, navContact];
+
+toContact.addEventListener('click', goToContact);
+function goToContact(){
+  contactPage();
+  navToContact();
+}
 
 let mobileNavClose = false;
 toggleNav.addEventListener('click', () => {

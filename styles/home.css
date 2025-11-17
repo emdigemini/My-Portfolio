@@ -111,6 +111,49 @@
   height: 30px;
 }
 
+.contactme-box {
+  position: relative;
+  width: 8rem;
+  background: linear-gradient(to right,
+    #ffffff,
+    #8e8e8e,
+    #1a1a1a,
+    #1a1a1a,
+    #1a1a1a,
+    #bfbfbf,
+    #ffffff
+  );
+  height: 3.2rem;
+  width: 10rem;
+  border-radius: 20px;
+  background-size: 200%;
+  animation: gradientAnimation 1.5s infinite linear;
+}
+
+.contactme {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 3px 3px 3px 3px;
+  background: #171717;
+  border-radius: 20px;
+  text-shadow: 0 0 4px white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.contactme:hover {
+  background: #f0f0f0;
+  color: #171717;
+}
+
+@keyframes gradientAnimation {
+  to {
+    background-position: 200%;
+  }
+}
+
 .animation-introduction {
   font-family: "Arapey", serif;
   font-weight: 600;
