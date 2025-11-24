@@ -114,19 +114,19 @@
 }
 
 .level-html::before {
-  width: 65%;
+  width: 80%;
 }
 
 .level-css::before {
-  width: 55%;
+  width: 80%;
 }
 
 .level-js::before {
-  width: 55%;
+  width: 70%;
 }
 
 .level-react::before {
-  width: 30%;
+  width: 50%;
 }
 
 .level-py::before {
@@ -138,7 +138,7 @@
 }
 
 .level-git::before {
-  width: 60%;
+  width: 70%;
 }
 
 .react, .nodejs,
@@ -173,19 +173,19 @@
 }
 
 .level-github::before {
-  width: 60%;
+  width: 70%;
 }
 
 .level-bootstrap::before {
-  width: 50%;
+  width: 70%;
 }
 
 .level-vscode::before {
-  width: 65%;
+  width: 86%;
 }
 
 .level-figma::before {
-  width: 15%;
+  width: 35%;
 }
 
 .back-end {
@@ -233,8 +233,9 @@
     gap: 24px;
     width: 300px;
   }
+  
   .html, .css, .javascript, .jsx,
-  .python, .php, .git, .bootstrap {
+  .python, .php, .git, .bootstrap, .react {
     width: 200px;
   }
 
@@ -243,19 +244,19 @@
   }
   
   .level-html::before {
-    width: 65%;
+    width: 80%;
   }
 
   .level-css::before {
-    width: 55%;
+    width: 80%;
   }
 
   .level-js::before {
-    width: 55%;
+    width: 75%;
   }
 
   .level-react::before {
-    width: 30%;
+    width: 50%;
   }
 
   .level-py::before {
@@ -267,11 +268,11 @@
   }
 
   .level-git::before {
-    width: 60%;
+    width: 70%;
   }
 
   .level-bootstrap::before {
-    width: 50%;
+    width: 70%;
   }
 
   .level-github {
@@ -279,16 +280,15 @@
   }
 
   .level-github::before {
-    width: 60%;
+    width: 70%;
   }
 
   .level-vscode::before {
-    width: 65%;
+    width: 85%;
   }
 
   .level-figma::before {
-    width: 15%;
+    width: 35%;
   }
-
   
 }
