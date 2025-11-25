@@ -83,9 +83,6 @@ function introAnimation(){
     thirdBox.addEventListener('animationend', () => {
     thirdBox.classList.remove('hide');
     thirdBox.classList.toggle('active');
-
-    lastBox.classList.remove('hide');
-    lastBox.classList.toggle('active');
     }, {once: true})
       
     }, {once: true})
@@ -374,9 +371,7 @@ function renderMyProject(){
       </div>
     `
   ).join('');
-  projectGroup.forEach(group => {
-    group.innerHTML = toHTML;
-  });
+  projectGroup.forEach(group => group.innerHTML = toHTML );
 }
 
 function renderOtherProject(){
@@ -562,13 +557,12 @@ const observer2 = new IntersectionObserver((viewPage) => {
       }
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.25 });
 
 [...body].forEach(child => observer2.observe(child));
 
 
 /* PROJECTS ANIMATION */
-
 function setAnimationState(state) {
   projectGroup.forEach(el => el.style.animationPlayState = state);
 }

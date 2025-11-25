@@ -38,6 +38,7 @@
 .touch-by-touch {
   position: relative;
   display: flex;
+  flex-direction: column;
   gap: 30px;
   margin-top: 25px;
   padding: 10px 45px;
