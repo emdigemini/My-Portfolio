@@ -24,6 +24,14 @@ export const allProjects = [
     demo: 'https://emdigemini.github.io/LightScent/'
   },
   {
+    myProject: true,
+    name: 'My Feed',
+    image: 'projects/myfeed.webp',
+    description: '"MY FEED" is a comprehensive, dark-themed social networking mobile UI concept that integrates detailed user profiles, a content feed, a navigation menu, and post creation screens.',
+    code: 'https://github.com/emdigemini/deploy-myfeed',
+    demo: 'https://emdigemini.github.io/deploy-myfeed/'
+  },
+  {
     otherProject: true,
     name: 'Tic Tac Toe',
     image: 'projects/tictactoe.webp',

@@ -82,7 +82,7 @@
   border: 1px solid #6666666c;
 }
 
-.count {
+.count-projects, .count-experience {
   color: #fff;
   font-size: 24px;
 }

@@ -1,4 +1,5 @@
 import { allProjects } from "./projects.js";
+import { countMonths } from "./countMonths.js";
 
 const firstBox = document.querySelector('.first-box');
 const secondBox = document.querySelector('.second-box');
@@ -434,7 +435,9 @@ function wacthDemo(){
   })
 }
 
-document.querySelector('.count').innerHTML = allProjects.length;
+document.querySelector('.count-projects').innerHTML = allProjects.length;
+document.querySelector('.count-experience').innerHTML = countMonths('2025-07-15', Date.now())
+
 
 renderMyProject();
 renderOtherProject();
@@ -559,3 +562,14 @@ const observer2 = new IntersectionObserver((viewPage) => {
 }, { threshold: 0.1 });
 
 [...body].forEach(child => observer2.observe(child));
+
+
+/* PROJECTS ANIMATION */
+const projectContainer = document.querySelectorAll('.project-container');
+
+function setAnimationState(state) {
+  myProject.style.animationPlayState = state;
+}
+
+myProject.addEventListener('mouseenter', () => setAnimationState("paused"));
+myProject.addEventListener('mouseleave', () => setAnimationState("running"));
