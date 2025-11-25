@@ -6,6 +6,7 @@ const secondBox = document.querySelector('.second-box');
 const thirdBox = document.querySelector('.third-box');
 const lastBox = document.querySelector('.last-box');
 const myProject = document.querySelector('.my-project');
+const projectGroup = document.querySelectorAll('.project-group');  
 const myOtherProject = document.querySelector('.my-other-projects');
 
 
@@ -95,7 +96,7 @@ function introAnimation(){
 }
 
 function resetAnimation(){
-  [firstBox, secondBox, thirdBox, lastBox].forEach(el => {
+  [firstBox, secondBox, thirdBox].forEach(el => {
     el.classList.remove('active');
     el.classList.add('hide');
   })
@@ -373,7 +374,9 @@ function renderMyProject(){
       </div>
     `
   ).join('');
-  myProject.innerHTML = toHTML;
+  projectGroup.forEach(group => {
+    group.innerHTML = toHTML;
+  });
 }
 
 function renderOtherProject(){
@@ -565,10 +568,9 @@ const observer2 = new IntersectionObserver((viewPage) => {
 
 
 /* PROJECTS ANIMATION */
-const projectContainer = document.querySelectorAll('.project-container');
 
 function setAnimationState(state) {
-  myProject.style.animationPlayState = state;
+  projectGroup.forEach(el => el.style.animationPlayState = state);
 }
 
 myProject.addEventListener('mouseenter', () => setAnimationState("paused"));

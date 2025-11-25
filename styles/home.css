@@ -179,8 +179,7 @@
 
 .first-box.hide p, 
 .second-box.hide p, 
-.third-box.hide p,
-.last-box.hide {
+.third-box.hide p {
   display: none;
 }
 
