@@ -43,7 +43,7 @@
   text-align: center;
 }
 
-.html, .css, .javascript, .jsx,
+.html, .css, .scss, .javascript, .jsx,
 .python, .php, .git, .bootstrap {
   display: flex;
   flex-direction: column;
@@ -58,6 +58,10 @@
 
 .css .icon i, .css .icon span {
   color: #2965F1;
+}
+
+.scss .icon i, .scss .icon span {
+  color: #CF649A  ;
 }
 
 .javascript .icon i, .javascript .icon span {

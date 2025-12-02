@@ -49,7 +49,7 @@
 .project-group {
   display: flex;
   width: 100%;
-  animation: imageSlider0 10s infinite linear;
+  animation: imageSlider 10s infinite linear;
 }
 
 .project-container {
@@ -143,12 +143,19 @@
   align-items: center;
   gap: 15px;
   padding: 4rem;
+  margin-top: 2rem;
+}
+
+.other-projects-container .projects-demo {
+  display: flex;
+  cursor: pointer;
 }
 
 .my-other-projects {
   display: flex;
-  flex-wrap: wrap;
   gap: 25px;
+  padding-left: 25px;
+  animation: imageSlider0 10s infinite linear;
 }
 
 .other-projects {
@@ -263,7 +270,6 @@ video {
     display: flex;
     gap: 1em;
     width: 100%;
-    animation: imageSlider0 10s infinite linear;
   }
 
   .project-container {
@@ -277,11 +283,6 @@ video {
     width: 100%;
     object-fit: cover;
   } 
-
-  .other-projects-container {
-    flex-wrap: wrap;
-    align-items: center;
-  }
 
   .other-projects-container .my-other-projects {
     flex: 1 1 150px;
@@ -336,11 +337,12 @@ video {
   }
 }
 
+
 @keyframes imageSlider0 {
   0% {
-    transform: translateX(40%);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-60%);
+    transform: translateX(50%);
   }
 }

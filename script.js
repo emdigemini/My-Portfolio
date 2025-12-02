@@ -4,10 +4,10 @@ import { countMonths } from "./countMonths.js";
 const firstBox = document.querySelector('.first-box');
 const secondBox = document.querySelector('.second-box');
 const thirdBox = document.querySelector('.third-box');
-const lastBox = document.querySelector('.last-box');
 const myProject = document.querySelector('.my-project');
 const projectGroup = document.querySelectorAll('.project-group');  
-const myOtherProject = document.querySelector('.my-other-projects');
+const myOtherProject = document.querySelectorAll('.my-other-projects');
+const projectsVid = document.querySelector('.projects-demo');
 
 
 const home_ = document.getElementById('home_');
@@ -409,7 +409,7 @@ function renderOtherProject(){
       </div>
     `
   ).join('');
-  myOtherProject.innerHTML = toHTML;
+  myOtherProject.forEach(el => el.innerHTML = toHTML)
 }
 
 function wacthDemo(){
@@ -502,9 +502,9 @@ function checkInvalidBox(form){
 /**---ANIMATION FOR CONTACTS---**/
 const contactSection = {
   anim1   :   document.querySelector('.get-in-touch'),
-  anim2   :   document.querySelector('.card1'),
-  anim3   :   document.querySelector('.card2'),
-  anim4   :   document.querySelector('.contact-box'),
+  anim2   :   document.querySelector('.contact-box'),
+  anim3   :   document.querySelector('.contact-info'),
+  anim4   :   document.querySelector('.send-message'),
 }
 
 const aboutSection = {
@@ -569,3 +569,5 @@ function setAnimationState(state) {
 
 myProject.addEventListener('mouseenter', () => setAnimationState("paused"));
 myProject.addEventListener('mouseleave', () => setAnimationState("running"));
+projectsVid.addEventListener('mouseenter', () => myOtherProject.forEach(el => el.getAnimations().forEach(anim => anim.pause())));
+projectsVid.addEventListener('mouseleave', () => myOtherProject.forEach(el => el.getAnimations().forEach(anim => anim.play())));

@@ -165,19 +165,19 @@
   }
 }
 
-.card1 {
+.contact-info {
   animation: slideOut1 0.8s ease-in forwards;
 }
 
-.card2 {
+.send-message {
   animation: slideOut2 0.8s ease-in forwards;
 }
 
-.card1.anim {
+.contact-info.anim {
   animation: slideIn1 0.8s ease-in forwards;
 }
 
-.card2.anim {
+.send-message.anim {
   animation: slideIn2 0.8s ease-in forwards;
 }
 
@@ -227,7 +227,7 @@
 }
 
 .contact-box.anim {
-  animation: slideUp 1.5s ease-in-out forwards;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 @keyframes slideUp {
