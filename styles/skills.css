@@ -125,6 +125,10 @@
   width: 80%;
 }
 
+.level-scss::before {
+  width: 80%;
+}
+
 .level-js::before {
   width: 70%;
 }
@@ -238,61 +242,13 @@
     width: 300px;
   }
   
-  .html, .css, .javascript, .jsx,
+  .html, .css, .scss, .javascript, .jsx,
   .python, .php, .git, .bootstrap, .react {
     width: 200px;
   }
 
   .vscode, .github, .figma {
     width: 100%;
-  }
-  
-  .level-html::before {
-    width: 80%;
-  }
-
-  .level-css::before {
-    width: 80%;
-  }
-
-  .level-js::before {
-    width: 75%;
-  }
-
-  .level-react::before {
-    width: 50%;
-  }
-
-  .level-py::before {
-    width: 60px;
-  }
-
-  .level-php::before {
-    width: 12px;
-  }
-
-  .level-git::before {
-    width: 70%;
-  }
-
-  .level-bootstrap::before {
-    width: 70%;
-  }
-
-  .level-github {
-    width: 100%;
-  }
-
-  .level-github::before {
-    width: 70%;
-  }
-
-  .level-vscode::before {
-    width: 85%;
-  }
-
-  .level-figma::before {
-    width: 35%;
   }
   
 }
